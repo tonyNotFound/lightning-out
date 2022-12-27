@@ -1,0 +1,26 @@
+<html>
+    <script scr="https://d5g00000blrubeaj-dev-ed.my.salesforce-sites.com/lightning/lightning.out.js"></script>
+    <div data-lightning-out></div>
+    <script>
+        const appName = 'c:wrapperOut';
+        const componentName = 'c:calcDisplay';
+        const lightningEndPoint = 'https://d5g00000blrubeaj-dev-ed.my.salesforce-sites.com';
+        const targetElement = document.querySelector("[data-lightning-out]");
+        const componentAttr = {};
+
+        $Lightning.use(
+            appName,
+            function() {
+                $Lightning.createComponent(
+                    componentName,
+                    componentAttr,
+                    targetElement,
+                    function(cmp) {
+                        console.log('Lighting app is been created boi');
+                    }
+                );
+            },
+            lightningEndPoint
+        );
+    </script>
+</html>
